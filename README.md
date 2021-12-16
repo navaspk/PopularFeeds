@@ -37,9 +37,13 @@ in app keys as we added in build.gradle
 
 buildConfigField "String", "API_KEY", "\"xxx\""
 
-Uploading record.mp4…
 
 
+
+
+
+
+https://user-images.githubusercontent.com/14113374/146425766-a0daa582-0d7e-466e-b8fd-a1d08d1be8aa.mp4
 
 
 
