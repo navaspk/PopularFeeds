@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">Articles</string>
+    <string name="theme">App Theme</string>
+    <string name="image_desc">Item image</string>
+    <string name="unknown_result">No response due to frequent request</string>
+    <string name="wrong_response">Something went wrong</string>
+    <string name="not_data">Sorry No data available</string>
+    <string name="ok">Okay</string>
+    <string name="internet_error">No Internet</string>
+    <string name="internet_error_message">No Internet access, please turn ON your WiFi or Data</string>
+    <string name="heading">NY Times Most Popular</string>
+    <string name="search">Search</string>
+</resources>

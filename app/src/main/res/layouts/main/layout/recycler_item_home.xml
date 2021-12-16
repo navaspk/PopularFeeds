@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.sample.core.domain.entity.ResultsItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8_dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/dimen_8_dp"
+        app:cardElevation="@dimen/dimen_8_dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="16dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/feedsArticleImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/feeds"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="30dp"
+                app:riv_oval="true"
+                app:riv_mutate_background="true"/>
+
+
+            <TextView
+                android:id="@+id/feedsTitle"
+                style="@style/NewsFeedsHeadingStyle"
+                android:text="@{data.title}"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/arrowRight"
+                app:layout_constraintStart_toEndOf="@+id/feedsArticleImage"
+                tools:ignore="MissingConstraints"
+                tools:text="This is the title of news" />
+
+            <TextView
+                android:id="@+id/feedsSummary"
+                style="@style/FeedsSummaryViewStyle"
+                android:layout_marginTop="4dp"
+                android:text="@{data.jsonMemberAbstract}"
+                app:layout_constraintEnd_toStartOf="@+id/arrowRight"
+                app:layout_constraintStart_toEndOf="@+id/feedsArticleImage"
+                app:layout_constraintTop_toBottomOf="@+id/feedsTitle"
+                tools:text="Summary of news" />
+
+            <TextView
+                android:id="@+id/feedsAuthorName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="4dp"
+                android:text="@{data.byline}"
+                android:textSize="@dimen/font_size_1"
+                app:layout_constraintEnd_toStartOf="@+id/feedsDate"
+                app:layout_constraintStart_toEndOf="@+id/feedsArticleImage"
+                app:layout_constraintTop_toBottomOf="@+id/feedsSummary"
+                tools:text="Author" />
+
+            <TextView
+                android:id="@+id/feedsDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_8_dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="@dimen/dimen_8_dp"
+                android:layout_marginBottom="4dp"
+                android:text="@{data.publishedDate}"
+                android:textSize="@dimen/font_size_1"
+                app:layout_constraintEnd_toStartOf="@+id/arrowRight"
+                app:layout_constraintTop_toBottomOf="@+id/feedsSummary"
+                tools:text="2019-03-20" />
+
+
+            <ImageView
+                android:id="@+id/arrowRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
