@@ -34,7 +34,12 @@ all the dependencies and need to add your own app key in app's build.gradle.
 On blow "xxx" need to be replace with your own key, so that with this approach we can make sure security
 in app keys as we added in build.gradle
 
+
 buildConfigField "String", "API_KEY", "\"xxx\""
+
+Uploading record.mp4…
+
+
 
 
 
